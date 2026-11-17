@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0A0C0E;
+  --panel: #101317;
+  --panel-2: #151A1F;
+  --line: #1E242A;
+  --ink: #E7EBEF;
+  --muted: #78848F;
+  --accent: #B4F461;
+  --accent-2: #5EEAD4;
+
+  --grid: rgba(255,255,255,0.045);
+  --wall: #2E3740;
+  --label: rgba(231,235,239,0.55);
+  --point-fill: rgba(10,12,14,0.9);
+  --point-stroke: rgba(180,244,97,0.85);
+  --heat-blend: lighter;
+
+  --strong: #4ADE80;
+  --fair: #FACC15;
+  --weak: #F87171;
+}
+
+[data-theme="light"] {
+  --bg: #F7F7F4;
+  --panel: #FFFFFF;
+  --panel-2: #F0F0EC;
+  --line: #E5E5DE;
+  --ink: #0F1419;
+  --muted: #6B7280;
+  --accent: #65A30D;
+  --accent-2: #0D9488;
+
+  --grid: rgba(0,0,0,0.05);
+  --wall: #C4C4BC;
+  --label: rgba(15,20,25,0.55);
+  --point-fill: rgba(255,255,255,0.95);
+  --point-stroke: rgba(101,163,13,0.9);
+  --heat-blend: multiply;
+}
+
+/* Exposes tokens as Tailwind classes: bg-panel, text-ink, border-line, text-accent... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-strong: var(--strong);
+  --color-fair: var(--fair);
+  --color-weak: var(--weak);
+  --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
